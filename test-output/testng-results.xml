@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="6799" started-at="2020-02-27T10:02:21Z" finished-at="2020-02-27T10:02:27Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="6799" started-at="2020-02-27T10:02:21Z" finished-at="2020-02-27T10:02:27Z">
+      <class name="testrest.postest_xml">
+        <test-method status="PASS" signature="init()[pri:0, instance:testrest.postest_xml@5034c75a]" name="init" is-config="true" duration-ms="30" started-at="2020-02-27T15:32:21Z" finished-at="2020-02-27T15:32:21Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- init -->
+        <test-method status="PASS" signature="createPlaceAPI()[pri:0, instance:testrest.postest_xml@5034c75a]" name="createPlaceAPI" duration-ms="6719" started-at="2020-02-27T15:32:21Z" finished-at="2020-02-27T15:32:27Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createPlaceAPI -->
+      </class> <!-- testrest.postest_xml -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
