@@ -14,6 +14,7 @@ public class gettest_json extends BaseClass {
 	public void getcase() {
 		//Use the below for path param
 		    RequestSpecification httpRequest = RestAssured.given();
+		   // httpRequest.log().all();
 			RestAssured.given().param("location", "-33.870775,151.199025")
 							   .param("radius", "5000")
 							   .param("key", "AIzaSyCE7yUJ6qm6_jw4BlW1relEZDgBr7-b7co");

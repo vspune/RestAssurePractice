@@ -3,12 +3,13 @@
 <suite name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="testrest.postest_xml">
+      <class name="testrest.addbook_post_delete_para_dynamic">
         <methods>
+          <include name="deletebook" invocation-numbers="0 1 2"/>
           <include name="init"/>
-          <include name="createPlaceAPI"/>
+          <include name="requestwritetoconsole"/>
         </methods>
-      </class> <!-- testrest.postest_xml -->
+      </class> <!-- testrest.addbook_post_delete_para_dynamic -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

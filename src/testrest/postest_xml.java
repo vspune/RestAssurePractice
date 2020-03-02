@@ -10,7 +10,6 @@ import java.util.List;
 import static org.hamcrest.Matchers.equalTo;
 import org.testng.annotations.Test;
 
-import files.common_data;
 import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
 import io.restassured.path.json.JsonPath;
@@ -25,15 +24,17 @@ public class postest_xml extends BaseClass {
 		Response res = null;
 		common_data cd=new common_data();
 
-		String converted=common_data.xmlgetconverstring(System.getProperty("user.dir") + "\\src\\files\\xmlget.xml");
+		String converted=common_data.converstring(System.getProperty("user.dir") + "\\src\\files\\xmlget.xml");
 		//System.out.println(converted);	
 		
 		res = given()
-				 .contentType(ContentType.XML)
+				 .contentType(ContentType.XML).log().all()// u can define the logs anywhere in given
 				 .body(converted) // send the converted xml to string
 				 .when()
 				 .post(common_data.postcommon_xml()) // call to common class
-				 .then().extract().response();
+			.then()
+				  .log().body()
+				  .extract().response();
 				
 		XmlPath x=cd.rawtoxml(res);// the outout is again converted to string
 		System.out.println(x.getString("response.scope")); // type x dot and u wll get the different type

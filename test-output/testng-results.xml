@@ -2,20 +2,24 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="6799" started-at="2020-02-27T10:02:21Z" finished-at="2020-02-27T10:02:27Z">
+  <suite name="Default suite" duration-ms="7209" started-at="2020-03-02T03:49:45Z" finished-at="2020-03-02T03:49:52Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="6799" started-at="2020-02-27T10:02:21Z" finished-at="2020-02-27T10:02:27Z">
-      <class name="testrest.postest_xml">
-        <test-method status="PASS" signature="init()[pri:0, instance:testrest.postest_xml@5034c75a]" name="init" is-config="true" duration-ms="30" started-at="2020-02-27T15:32:21Z" finished-at="2020-02-27T15:32:21Z">
+    <test name="Default test" duration-ms="7209" started-at="2020-03-02T03:49:45Z" finished-at="2020-03-02T03:49:52Z">
+      <class name="testrest.addbook_Static_data">
+        <test-method status="PASS" signature="requestwritetoconsole()[pri:0, instance:testrest.addbook_Static_data@4f933fd1]" name="requestwritetoconsole" is-config="true" duration-ms="20" started-at="2020-03-02T09:19:45Z" finished-at="2020-03-02T09:19:45Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- requestwritetoconsole -->
+        <test-method status="PASS" signature="init()[pri:0, instance:testrest.addbook_Static_data@4f933fd1]" name="init" is-config="true" duration-ms="0" started-at="2020-03-02T09:19:45Z" finished-at="2020-03-02T09:19:45Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- init -->
-        <test-method status="PASS" signature="createPlaceAPI()[pri:0, instance:testrest.postest_xml@5034c75a]" name="createPlaceAPI" duration-ms="6719" started-at="2020-02-27T15:32:21Z" finished-at="2020-02-27T15:32:27Z">
+        <test-method status="PASS" signature="addbook()[pri:0, instance:testrest.addbook_Static_data@4f933fd1]" name="addbook" duration-ms="7158" started-at="2020-03-02T09:19:45Z" finished-at="2020-03-02T09:19:52Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- createPlaceAPI -->
-      </class> <!-- testrest.postest_xml -->
+        </test-method> <!-- addbook -->
+      </class> <!-- testrest.addbook_Static_data -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

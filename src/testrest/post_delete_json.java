@@ -3,16 +3,15 @@ package testrest;
 import static io.restassured.RestAssured.given;
 import static org.junit.Assert.assertTrue;
 import static org.testng.Assert.assertEquals;
-import static org.hamcrest.Matchers.equalTo;
+
 import org.testng.annotations.Test;
 
-import files.common_data;
 import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
 import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
 
-public class postest_json extends BaseClass {
+public class post_delete_json extends BaseClass {
 
 	@Test
 	public void createPlaceAPI() {
@@ -21,11 +20,13 @@ public class postest_json extends BaseClass {
 
 		
 		res = given()
-					.contentType(ContentType.JSON)
-				 .body(common_data.getcommondata())
+				 			.contentType(ContentType.JSON).log().all()
+				 			.body(common_data.getcommondata())
 				 	.when()
-				.post(common_data.postcommon_json()) // call to common class
-				.then().extract().response();
+				 			.post(common_data.postcommon_json()) // call to common class
+				 	.then()
+				 		    .log().all()
+				 			.extract().response();
 
 		String reesponseis = res.asString();
 		System.out.println(reesponseis);
@@ -33,6 +34,7 @@ public class postest_json extends BaseClass {
 		assertTrue(status);
 		assertEquals(200, res.statusCode());
 
+		//Extract the data and send 
 		JsonPath js = new JsonPath(reesponseis);// json path for traversing the data
 		String placeid = js.get("place_id");
 		System.out.println("Place id is :" + placeid);
